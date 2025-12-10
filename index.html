@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Aaron & Baichen – Custom Prints from Bukit Batok</title>
+  <title>C00LKIDD Prints – Custom Prints from Bukit Batok</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Supahulk 3D Prints, fun, small 3D prints from Bukit Batok. Choose a model from Printables or Thingiverse and get it printed locally. Cash on collection in school. Great for Christmas gifts." />
+  <meta name="description" content="C00LKIDD Prints – student-run 3D printing for fun projects in Bukit Batok. Choose a design from Printables or Thingiverse and have it printed locally." />
+
   <style>
     :root {
       --bg: #050608;
@@ -28,8 +29,6 @@
       color: var(--text);
       line-height: 1.6;
     }
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
 
     .page {
       min-height: 100vh;
@@ -48,11 +47,8 @@
       margin-bottom: 28px;
       gap: 16px;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+
+    .brand { display: flex; align-items: center; gap: 10px; }
     .brand-logo {
       width: 32px;
       height: 32px;
@@ -72,16 +68,8 @@
       letter-spacing: 0.08em;
     }
 
-    nav {
-      display: flex;
-      gap: 18px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    nav a {
-      padding: 4px 0;
-      position: relative;
-    }
+    nav { display: flex; gap: 18px; font-size: 0.85rem; color: var(--text-muted); }
+    nav a { padding: 4px 0; position: relative; }
     nav a::after {
       content: "";
       position: absolute;
@@ -93,81 +81,16 @@
       transition: width 0.2s;
     }
     nav a:hover::after { width: 100%; }
-    .nav-cta {
-      padding: 8px 16px;
-      border-radius: 1000px;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-    }
 
     /* Hero */
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 24px;
-      align-items: center;
-      margin-bottom: 40px;
-    }
+    .hero { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 40px; }
     .hero-kicker {
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
+      font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 12px;
     }
-    .hero-title {
-      font-size: clamp(2.1rem, 3.2vw, 2.9rem);
-      font-weight: 700;
-      margin-bottom: 14px;
-      line-height: 1.15;
-    }
+    .hero-title { font-size: clamp(2.1rem, 3.2vw, 2.9rem); font-weight: 700; margin-bottom: 14px; }
     .hero-highlight { color: var(--accent); }
-    .hero-subtitle {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      max-width: 36rem;
-      margin-bottom: 18px;
-    }
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 18px;
-      margin-bottom: 20px;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-    .hero-meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15, 18, 30, 0.9);
-      border: 1px solid rgba(63, 70, 102, 0.9);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .btn {
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #ff8a3d, #ffd85a);
-      color: #1a130c;
-      font-weight: 600;
-    }
-    .btn-ghost {
-      background: rgba(10, 11, 18, 0.95);
-      border: 1px solid rgba(63, 70, 102, 0.9);
-      color: var(--text-muted);
-    }
+    .hero-subtitle { font-size: 0.98rem; color: var(--text-muted); max-width: 36rem; margin-bottom: 18px; }
 
     /* Sections */
     section { margin-bottom: 32px; }
@@ -184,106 +107,42 @@
 
     /* Gallery */
     .grid { display: grid; gap: 14px; }
-    @media (min-width: 720px) {
-      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 719px) {
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (min-width: 720px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 719px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
 
     .card {
       border-radius: var(--radius-md);
       border: 1px solid var(--border);
       background: rgba(12, 13, 22, 0.99);
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
     }
     .card-media {
-      position: relative;
-      background: #0b0c10;
-      aspect-ratio: 4 / 3;
-    }
-    .card-media img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      background: #222;
+      aspect-ratio: 4 / 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     .card-body { padding: 10px; }
-    .card-title-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-    }
     .card-title { font-size: 0.9rem; font-weight: 550; }
-    .card-price { font-size: 0.86rem; color: var(--accent); font-weight: 600; }
-    .card-desc {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-    .card-tags {
-      margin-top: 4px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-    }
+    .card-desc { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+    .card-tags { margin-top: 4px; display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.7rem; color: var(--text-muted); }
     .card-tag {
-      padding: 3px 7px;
-      border-radius: 999px;
+      padding: 3px 7px; border-radius: 999px;
       background: rgba(16, 18, 30, 0.96);
       border: 1px solid rgba(43, 49, 78, 0.9);
     }
 
-    /* Steps */
-    .steps { display: grid; gap: 10px; }
-    .step {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 8px;
-      align-items: flex-start;
-    }
-    .step-number {
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-size: 0.78rem;
-      margin-top: 2px;
-    }
-
-    /* Footer */
     footer {
-      margin-top: 24px;
-      font-size: 0.74rem;
-      color: var(--text-muted);
+      margin-top: 24px; font-size: 0.74rem; color: var(--text-muted);
       border-top: 1px solid rgba(35, 37, 58, 0.95);
       padding-top: 12px;
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    @media (max-width: 880px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-    @media (max-width: 540px) {
-      .page { padding-inline: 14px; }
-      footer { flex-direction: column; }
-      .hero-actions { flex-direction: column; }
+      display: flex; justify-content: space-between; gap: 12px;
     }
   </style>
 </head>
@@ -296,15 +155,14 @@
     <div class="brand">
       <div class="brand-logo"></div>
       <div>
-        <div class="brand-text-main">A&B 3D Print Bros</div>
-        <div class="brand-text-sub">Fun custom 3D prints, perfect for Christmas gifts</div>
+        <div class="brand-text-main">C00LKIDD Prints</div>
+        <div class="brand-text-sub">Fun custom 3D prints from Bukit Batok</div>
       </div>
     </div>
     <nav>
       <a href="#gallery">Prints</a>
-      <a href="#how-to-buy">How to buy</a>
+      <a href="#how-to-order">How it works</a>
       <a href="#contact">Contact</a>
-      <a href="#contact" class="nav-cta">Message to order</a>
     </nav>
   </header>
 
@@ -313,58 +171,46 @@
     <div>
       <div class="hero-kicker">Print on demand!</div>
       <h1 class="hero-title">
-        3D prints made to order. Excellent toys, tools, and gadgets, and perfect as a gift to yourself or others.
-        <span class="hero-highlight">Excellent Christmas gifts. See our sample range of Christmas themed prints below.</span>
+        3D prints made to order. Toys, tools, gadgets, decorations and more.
+        <span class="hero-highlight">Great fun projects for students.</span>
       </h1>
+
       <p class="hero-subtitle">
-        My name is Aaron, I take your ideas to 3D printed objects that you have always wanted. 
-	  You can tell me about what you want or send a link to a model from
+        My name is Aaron. I help turn your ideas into real 3D prints.
+        You can send me a link to any model from
         <a href="https://www.printables.com" target="_blank" rel="noopener">Printables</a>
         or
-        <a href="https://www.thingiverse.com" target="_blank" rel="noopener">Thingiverse</a>.
-        I will check the amount of material and time to print, and give you a quotation.
-        I will then pass you the 3D print in school in exchange for payment :)
+        <a href="https://www.thingiverse.com" target="_blank" rel="noopener">Thingiverse</a>,
+        or simply describe what you want. I will check if the model is printable and tell you what is possible.
       </p>
+
       <div class="hero-meta">
-        <span>Choose designs from Printables or Thingiverse</span>
-        <span>Printed by Dulwich Singapore students</span>
-        <span>Cash on collection</span>
-      </div>
-      <div class="hero-actions">
-        <button class="btn btn-primary" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
-          See Christmas prints
-        </button>
-        <button class="btn btn-ghost" onclick="document.getElementById('how-to-buy').scrollIntoView({behavior:'smooth'})">
-          How it works
-        </button>
+        <span>Choose designs online</span>
+        <span>Student-run project</span>
+        <span>Local printing</span>
       </div>
     </div>
   </section>
 
-  <!-- What I print -->
+  <!-- About -->
   <section id="about">
     <div class="section-header">
-      <h2 class="section-title">What I can print for you?</h2>
-      <p class="section-subtitle">We turn your ideas into reality!</p>
+      <h2 class="section-title">What can be printed?</h2>
+      <p class="section-subtitle">Many types of small objects are possible.</p>
     </div>
 
     <div class="about-card">
-      <p class="about-text">
-        AB 3D Print Bros is based in Bukit Batok.
-        You can choose your models from online catalogues, or give us your requests and we will try to design something unique for you!
-        <br><br>
-        Go to sites like
-        <a href="https://www.printables.com" target="_blank" rel="noopener">Printables</a>
-        or
-        <a href="https://www.thingiverse.com" target="_blank" rel="noopener">Thingiverse</a>,
-        pick something you like, and send me the link. If the model is printable I will give you a price and a time estimate.
+      <p>
+        C00LKIDD Prints is based in Bukit Batok.  
+        You can choose models from online websites or share a new idea.  
+        If it is printable, I can prepare it for you.
       </p>
       <div class="steps" style="margin-top: 10px;">
-        <div class="card-tag">Most prints up to about 25 × 25 × 20 cm</div>
-        <div class="card-tag">Great for toys, tools, gadgets, replacement parts, missing Lego pieces, and small gifts</div>
-        <div class="card-tag">PLA prints in simple, solid colours</div>
-        <div class="card-tag">You choose the file, I do the printing</div>
-	  <div class="card-tag">If you need something more special or unique, I can probably do it for you</div>
+        <div class="card-tag">Objects up to around 25 × 25 × 20 cm</div>
+        <div class="card-tag">Toys, decorations, gadgets, parts, and more</div>
+        <div class="card-tag">PLA prints in solid colours</div>
+        <div class="card-tag">You choose the file, I handle the printing</div>
+        <div class="card-tag">Some models may require permission depending on licensing</div>
       </div>
     </div>
   </section>
@@ -372,140 +218,45 @@
   <!-- Gallery -->
   <section id="gallery">
     <div class="section-header">
-      <h2 class="section-title">Christmas themed prints and more</h2>
-      <p class="section-subtitle">Here are some examples. Ask about other ideas too.</p>
+      <h2 class="section-title">Sample print ideas</h2>
+      <p class="section-subtitle">These are just examples. New ideas are always welcome.</p>
     </div>
 
     <div class="grid gallery-grid">
 
-      <!-- Christmas 1: Passthrough tree toy -->
+      <!-- Placeholder cards -->
       <article class="card">
-        <div class="card-media">
-          <img src="xmas_passthrough_tree.png" alt="Green and white Christmas tree passthrough toy">
-        </div>
+        <div class="card-media">Placeholder</div>
         <div class="card-body">
-          <div class="card-title-row">
-            <h3 class="card-title">Passthrough Christmas Tree Toy</h3>
-            <div class="card-price">From $8</div>
-          </div>
-          <p class="card-desc">
-            A two part print that allows each piece to mysteriously pass through one another!
-          </p>
-          <div class="card-tags">
-            <span class="card-tag">Christmas themed</span>
-            <span class="card-tag">Great stocking filler</span>
-          </div>
+          <h3 class="card-title">Example Print</h3>
+          <p class="card-desc">Replace this with a real print later.</p>
         </div>
       </article>
 
-      <!-- Christmas 2: Tree ornament -->
       <article class="card">
-        <div class="card-media">
-          <img src="xmas_ornament_ball.png" alt="3D printed Christmas bauble ornament">
-        </div>
+        <div class="card-media">Placeholder</div>
         <div class="card-body">
-          <div class="card-title-row">
-            <h3 class="card-title">Tree Ornament</h3>
-            <div class="card-price">From $5</div>
-          </div>
-          <p class="card-desc">
-            Awesome geometry that gives a cool effect when slowly spinning!
-          </p>
-          <div class="card-tags">
-            <span class="card-tag">Tree decoration</span>
-            <span class="card-tag">Different colours possible</span>
-          </div>
+          <h3 class="card-title">Example Print</h3>
+          <p class="card-desc">You can add any print idea here once you upload pictures.</p>
         </div>
       </article>
 
-      <!-- Christmas 3: Mario Tree Topper Star -->
       <article class="card">
-        <div class="card-media">
-          <img src="xmas_ornament_star.png" alt="Mario style tree topper star">
-        </div>
+        <div class="card-media">Placeholder</div>
         <div class="card-body">
-          <div class="card-title-row">
-            <h3 class="card-title">Mario Tree Topper Star</h3>
-            <div class="card-price">From $15</div>
-          </div>
-          <p class="card-desc">
-            A cool Mario star that can be placed as is, or you can feed the tree lights through the base and light it up!
-          </p>
-          <div class="card-tags">
-            <span class="card-tag">Star shaped</span>
-            <span class="card-tag">Perfect for Christmas</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Articulated shark -->
-      <article class="card">
-        <div class="card-media">
-          <img src="articulated_shark.png" alt="Articulated Shark 3D print">
-        </div>
-        <div class="card-body">
-          <div class="card-title-row">
-            <h3 class="card-title">Articulated Shark</h3>
-            <div class="card-price">$5</div>
-          </div>
-          <p class="card-desc">
-            A wiggly jiggly shark that your little brothers and sisters will love.
-          </p>
-          <div class="card-tags">
-            <span class="card-tag">Fully movable</span>
-            <span class="card-tag">Printed in PLA</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Godzilla -->
-      <article class="card">
-        <div class="card-media">
-          <img src="godzilla.png" alt="3D printed Godzilla figure">
-        </div>
-        <div class="card-body">
-          <div class="card-title-row">
-            <h3 class="card-title">Godzilla</h3>
-            <div class="card-price">From $15</div>
-          </div>
-          <p class="card-desc">
-            My brother loves Godzilla, and keeps asking for prints like this.
-          </p>
-          <div class="card-tags">
-            <span class="card-tag">Display piece</span>
-            <span class="card-tag">Paintable</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Star shaped concentric toy -->
-      <article class="card">
-        <div class="card-media">
-          <img src="star_concentric_toy.png" alt="Star shaped concentric 3D printed toy">
-        </div>
-        <div class="card-body">
-          <div class="card-title-row">
-            <h3 class="card-title">Star Concentric Toy</h3>
-            <div class="card-price">$10</div>
-          </div>
-          <p class="card-desc">
-            This one even keeps my mum and dad busy with the cool patterns it makes.
-          </p>
-          <div class="card-tags">
-            <span class="card-tag">Fidget style toy</span>
-            <span class="card-tag">Star themed</span>
-          </div>
+          <h3 class="card-title">Example Print</h3>
+          <p class="card-desc">Images will appear here once you are ready.</p>
         </div>
       </article>
 
     </div>
   </section>
 
-  <!-- How to Buy -->
-  <section id="how-to-buy">
+  <!-- How to Order -->
+  <section id="how-to-order">
     <div class="section-header">
-      <h2 class="section-title">How orders work</h2>
-      <p class="section-subtitle">Simple steps, no online payment.</p>
+      <h2 class="section-title">How it works</h2>
+      <p class="section-subtitle">Simple steps to get something printed.</p>
     </div>
 
     <div class="about-card">
@@ -514,64 +265,60 @@
         <div class="step">
           <div class="step-number">1</div>
           <div>
-            <strong>Find a 3D model you like.</strong><br>
-            Browse Printables or Thingiverse and copy the link, or think of something you want.
+            <strong>Find a model you like.</strong><br>
+            Browse Printables or Thingiverse, or think of an idea.
           </div>
         </div>
 
         <div class="step">
           <div class="step-number">2</div>
           <div>
-            <strong>Tell me what you want.</strong><br>
-            Talk to me in school, or contact me through this page, and show me the link or idea.
+            <strong>Show me the link or describe the idea.</strong><br>
+            Talk to me in school or share the link.
           </div>
         </div>
 
         <div class="step">
           <div class="step-number">3</div>
           <div>
-            <strong>I check the print and give a quotation.</strong><br>
-            I look at the size and printing time, then give you a clear price and how long it will take. If you buy multiple, you could get a discount :)
+            <strong>I check if it can be printed.</strong><br>
+            Some models may require permission depending on licensing.
           </div>
         </div>
 
         <div class="step">
           <div class="step-number">4</div>
           <div>
-            <strong>We meet in school and you pay cash.</strong><br>
-            When the print is ready I bring it to school. You check it, and pay in cash.
+            <strong>I print it and bring it to school.</strong><br>
+            Simple, safe, and student-run.
           </div>
         </div>
 
       </div>
-      <p style="font-size: 0.78rem; color: var(--text-muted); margin-top:10px;">
-        Prices are guide prices. Very large or tricky models may cost more, but I will always confirm the price before printing.
-      </p>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <div class="section-header">
-      <h2 class="section-title">Contact and location</h2>
-      <p class="section-subtitle">Ask about a model or send me a link.</p>
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Ask about a model or send a link.</p>
     </div>
 
     <div class="about-card">
       <p>
-        WhatsApp and Instagram will be added later.
-        For now, you can talk to me in school and show me your idea, or share a link from Printables or Thingiverse.
+        WhatsApp or Instagram will be added later.  
+        For now, just talk to me in school and show me what you want printed.
       </p>
       <p style="font-size: 0.78rem; color: var(--text-muted); margin-top:10px;">
-        If you are under 18, please make sure your parent or guardian knows about your order.
+        If you are under 18, please make sure your parent or guardian knows about your request.
       </p>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <span>© <span id="year"></span> Supahulk 3D Prints</span>
-    <span>No cookies, no tracking, just prints.</span>
+    <span>© <span id="year"></span> C00LKIDD Prints</span>
+    <span>No cookies, no tracking.</span>
   </footer>
 
 </div></div>
@@ -582,4 +329,3 @@
 
 </body>
 </html>
-
