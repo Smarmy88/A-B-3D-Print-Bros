@@ -128,6 +128,11 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .card-body { padding: 10px; }
     .card-title { font-size: 0.9rem; font-weight: 550; }
     .card-desc { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
@@ -215,7 +220,7 @@
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- GALLERY -->
   <section id="gallery">
     <div class="section-header">
       <h2 class="section-title">Sample print ideas</h2>
@@ -224,15 +229,22 @@
 
     <div class="grid gallery-grid">
 
-      <!-- Placeholder cards -->
+      <!-- REPLACED FIRST PLACEHOLDER -->
       <article class="card">
-        <div class="card-media">Placeholder</div>
+        <div class="card-media">
+          <img src="bauble_with_legs.png" alt="Bauble guy with dangling legs">
+        </div>
         <div class="card-body">
-          <h3 class="card-title">Example Print</h3>
-          <p class="card-desc">Replace this with a real print later.</p>
+          <h3 class="card-title">Bauble Guy with Dangly Legs!</h3>
+          <p class="card-desc">This guy adds a touch of nonchalance to your Christmas decorations.</p>
+          <div class="card-tags">
+            <span class="card-tag">Christmas themed</span>
+            <span class="card-tag">Decoration</span>
+          </div>
         </div>
       </article>
 
+      <!-- Placeholder 2 -->
       <article class="card">
         <div class="card-media">Placeholder</div>
         <div class="card-body">
@@ -241,6 +253,7 @@
         </div>
       </article>
 
+      <!-- Placeholder 3 -->
       <article class="card">
         <div class="card-media">Placeholder</div>
         <div class="card-body">
@@ -252,7 +265,7 @@
     </div>
   </section>
 
-  <!-- How to Order -->
+  <!-- How it works -->
   <section id="how-to-order">
     <div class="section-header">
       <h2 class="section-title">How it works</h2>
